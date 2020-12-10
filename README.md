@@ -25,7 +25,7 @@ $ cd backend
 $ npm i
 $ npm start
 ```
-For Frontend Development
+To run the frontend Development
 ```
 $ cd frontend
 $ npm i
