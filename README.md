@@ -1,6 +1,6 @@
 # Personal Blog and Portfolio
-This project is all about creating web application where I will write blogs about my current projects I will be building and working on as well as will contain list of softwares and tools I have created.
-This application contains a seperate backend and a frontend.
+This project is all about creating web application where I will write blogs about my current projects that I will be building and working on as well as it will contain list of softwares and tools I have created along with my portfolio.
+This application contains a seperate frontend, backend and a database. 
 
 ### Technology Stack
 This web application is going to be built on top of microservice architechture.
@@ -16,6 +16,10 @@ This web application is going to be built on top of microservice architechture.
 * [MYSQL] -  Database 
 ##### Database
 * [MYSQL Workbench] - MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more.
+
+### Prerequisites
+* Node version 12.18.1 or above must be installed.
+* MYSQL Service along with MYSQL Workbench must be installed.
 
 ### Development
 Requires [MYSQL] service to run and create database.
@@ -33,8 +37,7 @@ $ cd frontend
 $ npm i
 $ npm start
 ```
-
-Work is on progress will be uploaded soon.
+Development is still on progress.
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen.)
 
@@ -45,3 +48,4 @@ Work is on progress will be uploaded soon.
 [TypeScript]: https://www.typescriptlang.org/
 [JSON Web Token]: https://jwt.io/
 [MYSQL]: https://www.mysql.com/
+[MYSQL Workbench]: https://www.mysql.com/downloads/
