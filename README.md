@@ -14,6 +14,8 @@ This web application is going to be built on top of microservice architechture.
  run code.
 * [JSON Web Token] - JWT for Authentication & Authorization
 * [MYSQL] -  Database 
+##### Database
+* [MYSQL Workbench] - MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more.
 
 ### Development
 Requires [MYSQL] service to run and create database.
