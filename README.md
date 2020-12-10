@@ -13,7 +13,7 @@ This web application is going to be built on top of microservice architechture.
 * [TypeScript] - TypeScript extends JavaScript by adding types. TypeScript saves you time catching errors and providing fixes before you     
  run code.
 * [JSON Web Token] - JWT for Authentication & Authorization
-* [MYSQL] -  Database 
+
 ##### Database
 * [MYSQL Workbench] - MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more.
 
