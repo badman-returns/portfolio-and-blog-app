@@ -1,0 +1,51 @@
+#blogs{
+    margin-top: 70px;
+    min-height: 100vh;
+}
+
+#posts{
+    margin: 40px;
+
+
+}
+#posts .box{
+    /* border: 2px solid black; */
+    margin: 2px 35px;
+    padding: 10px;
+    background-color: #faf7f7;
+    /* border-radius: 15px; */
+    margin-bottom: 20px;
+    background-color: white;
+    -moz-box-shadow: 0 5px 10px #999;
+    -webkit-box-shadow: 0 5px 10px #999;
+    box-shadow: 0 5px 10px #999;
+}
+.h-secondary{
+    font-family: 'Ubuntu', serif;
+    font-size: 1.8rem;
+    padding: 20px;
+}
+
+.card-bodie {
+    padding: 30px 40px;
+    min-height: 300px;
+    margin: 0;
+}
+.back-button{
+    
+    position: fixed; /* Fixed/sticky position */
+    opacity: 0.5;
+    bottom: 70px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /*Add a mouse pointer on hover*/
+    padding: 15px; /* Some padding */
+    
+}
+@media only screen and (min-width:991px){
+    .card-group{
+        margin:0 150px;
+    }
+}

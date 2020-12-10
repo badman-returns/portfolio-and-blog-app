@@ -1,0 +1,121 @@
+/* About Section  */
+
+
+.about-title{
+    text-transform: uppercase;
+    margin-top: 150px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    /* font-weight: bold; */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.about-para{
+    font-size: 15px;
+    margin-top: 30px;
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;
+    justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+@media only screen and (min-width : 992px){
+    #bio{
+        height:680px;
+    }
+    .about-title{
+        font-size:40px;
+    }
+    .about-para{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 991px){
+    #bio{
+        height:600px;
+    }
+    .about-title{
+        margin-top:70px;
+    }
+    .about-para{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 768px){
+    #bio{
+        height:760px;
+    }
+    .about-title{
+        margin-top:70px;
+    }
+    .about-para{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width:595px){
+    .about-para{
+    font-size: 16px;
+    }
+    #bio{
+        height:500px;
+    }
+}
+@media only screen and (max-width:462px){
+    #bio{
+        height: 900px;
+
+        
+    }
+    .about-title{
+        margin-top: 110px;
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:380px){
+    #bio{
+        height: 1020px;
+
+        
+    }
+    .about-title{
+        margin-top: 270px;
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:375px){
+    #bio{
+        height: 940px;
+
+        
+    }
+    .about-title{
+        margin-top: 150px;
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:362px){
+    #bio{
+        height: 990px;
+
+        
+    }
+    .about-title{
+        margin-top: 70px;
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width:330px){
+    #bio{
+        height: 1000px;
+
+        
+    }
+    .about-title{
+        margin-top: 70px;
+        font-size: 40px;
+    }
+}
+.black{
+    background-color: black;
+}

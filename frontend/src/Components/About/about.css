@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.grey{
+    background-color: rgb(243, 243, 243);
+    min-height: 100vh;
+}
+
+
+
+/* Cards */
+
+.card-body{
+    background-color: white;
+    margin-top: 70px;
+    margin-bottom: 30px ;
+    -moz-box-shadow: 0 5px 10px #999;
+    -webkit-box-shadow: 0 5px 10px #999;
+    box-shadow: 0 5px 10px #999;
+    
+}
+
+.card-body-2{
+    background-color: white;
+    -moz-box-shadow: 0 5px 10px #999;
+    -webkit-box-shadow: 0 5px 10px #999;
+    box-shadow: 0 5px 10px #999;
+    margin: 70px auto;
+}
+
+
+.card-body h4{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+.card-body h5{
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+.card-body li{
+    list-style: inside;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    
+}
+@media only screen and (max-width:991px){
+    .card-body{
+        box-shadow: 5px 1px 5px 1px rgb(190, 190, 190);
+        
+    }
+    
+    .card-body li{
+        list-style: inside;
+    }
+    .card-body-2{
+        margin:0;
+    }
+}
+
+.img-fluid-rounded-circle{
+    border-radius:50%;
+    /* filter: none !important; */
+    margin: 0 auto;
+
+}
+.marker{
+    display: flex;
+    float: center;
+}
+p{
+    margin-bottom: 0 !important;
+}
+.marker p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.marker img{
+    margin: 10 10px;
+    width: 30px;
+}
+/*Nav Tabs*/
+
+.nav-pills{
+    float: right;
+}
+@media only screen and (max-width:991px){
+    .nav-tabs{
+        float:left;
+    }
+}
+.nav-pills{
+    
+    color:#000 !important;
+}
+
+.journey{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    margin: 10px 20px;
+}
+.j-para{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    margin: 0 20px;
+}
+.list{
+    margin:0 20px;
+}
+
+
+
+.nav-pills .nav-link.active{
+    color:white;
+    background-color: black;
+}
+.nav-item a{
+    color:black;
+}

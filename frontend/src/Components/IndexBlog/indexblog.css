@@ -1,0 +1,23 @@
+
+#indexBlogs{
+    background-color: rgb(224, 224, 224);
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+.card-bodi{
+    padding: 30px 40px;
+    min-height: 350px;
+    margin: 0;
+}
+.btn{
+    margin: 5px auto;
+    vertical-align: -webkit-baseline-middle ;
+}
+.card {
+    margin:15px 0;
+}
+.row{
+   
+    margin: 0px auto;
+}

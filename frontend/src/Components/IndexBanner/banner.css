@@ -1,0 +1,147 @@
+/* Banner Section */
+#banner::before{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    left: 0;
+    width: 100%;    
+    background-color: black;
+    height: 100vh;
+    overflow:hidden;
+    opacity: 0.5;
+}
+
+#banner{
+    background: url('../../assets/img/alessandro-pacilio-0iQzuJKmNvo-unsplash.jpg')no-repeat center/cover;
+    height: 100vh;
+    padding-top: 5%;
+}
+
+.name-title{
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    margin-top: 140px;
+}
+.name-para{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    text-justify: inter-word;
+    padding-left: 245px;
+    padding-right: 245px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.items-2{
+    justify-content: center !important;
+    text-align: center !important;
+}
+.items-2 img{
+    width: 25px !important;
+    margin: 30px 10px !important; 
+    filter: invert(1);
+}
+@media only screen and (min-height: 768px){
+    .name-title{
+        margin-top: 220px;
+    }
+}
+@media only screen and (min-height: 1023px){
+    .name-title{
+        
+        margin-top: 350px !important;
+    }
+    .name-para{
+        font-size: 20px !important;
+    }
+}
+@media only screen and (min-height : 1366px){
+    .name-title{
+        font-size: 80px !important;
+        margin-top:370px !important;
+    }
+    .name-para{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 25px !important;
+    }
+}
+
+
+@media only screen and (min-width : 992px){
+    .name-title{
+        
+        font-size: 68px;
+        
+    }
+    .name-para{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width : 991px){
+    .name-title{
+        font-size: 58px;
+        margin-top: 190px;
+        
+    }
+    .name-para{
+        padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;
+    }
+}
+@media only screen and (max-width : 768px){
+    .name-title{
+        font-size: 62px;
+        /* margin-top: 230px; */
+        
+    }
+    .name-para{
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 19px;
+    }
+    .items-2 img{
+        margin: 45px 12px !important; 
+    }
+    .chevron-down a img{
+         display: none;
+    }
+   
+}
+
+@media only screen and (max-width : 488px){
+    .name-title{
+        font-size: 51px;
+        margin-top: 150px ;
+    }
+    .name-para{
+        font-size: 18px;
+    }
+    .items-2 img{
+        margin: 15px 25px !important; 
+    }
+}
+@media only screen and (max-width : 321px){
+    .name-title{
+        font-size: 45px;
+        margin-top: 140px;
+    }
+    .name-para{
+        font-size: 16px;
+    }
+    .items-2 img{
+        margin: 15px 20px !important; 
+    }
+    #banner{
+        height: 100%;
+    }
+    #banner::before{
+        padding-top:0;
+        height:125vh;
+    }
+}
