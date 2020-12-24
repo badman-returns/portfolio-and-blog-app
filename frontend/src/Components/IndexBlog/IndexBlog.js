@@ -11,11 +11,10 @@ class BlogPost extends React.Component {
     }
 
     async componentDidMount() {
-        const url = await ('http://localhost:8081/api/showall')
-        const response = await fetch(url);
-        const result = await response.json();
-        this.setState({ blog: result.data.blog })
-        console.log(this.state.blog);
+        await fetch('http://localhost:8080/api/v2/blog').then(response => response.json()).then(result => {
+           this.setState({blog: result.ResponseData});
+           console.log(this.state.blog);
+       })
     }
     render() {
         const { blog } = this.state;
@@ -33,8 +32,8 @@ class BlogPost extends React.Component {
                                         <div className="card-bodi">
                                             <h5 className="card-title">{blog.title}</h5>
                                             <p className="card-text">{blog.description}</p>
-                                            <button className="btn btn-success" style={{ color: 'white' }}>Read more</button>
-                                            <Link to="/blog" className="btn btn-primary">More Blogs</Link>
+                                            <Link to={`/blog/${blog.id}`} className="btn btn-success" style={{ color: 'white' }}>Read more</Link>
+                                            <Link to="/blogs" className="btn btn-primary">More Blogs</Link>
                                         </div>
                                     </div>
                                 </div>

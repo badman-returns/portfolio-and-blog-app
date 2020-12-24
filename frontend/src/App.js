@@ -23,11 +23,11 @@ function App() {
         <Route path="/about">
           <AboutMe />
         </Route>
-        <Route path="/blog">
+        <Route path="/blogs">
           <AllBlogs />
         </Route>
-        <Route path="/blog/:id"> 
-          <BlogDetails />
+        <Route path={`/blog/:id`}> 
+         <BlogDetails />
         </Route>
       </Switch>
       <Footer />
