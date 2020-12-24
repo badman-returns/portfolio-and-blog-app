@@ -24,7 +24,7 @@ function Navbar() {
                             </ul>
                             <ul className='navbar-nav'>
                                 <li className='nav-item'>
-                                    <Link to='/blog' className='nav-link'>Blog<span /></Link>
+                                    <Link to='/blogs' className='nav-link'>Blog<span /></Link>
                                 </li>
                             </ul>
                             

@@ -62,7 +62,7 @@ export class BlogDB {
                 if (err) {
                     return reject(err);
                 }
-                return resolve();
+                return resolve(null);
             });
         });
     }

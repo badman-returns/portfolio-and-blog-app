@@ -1,5 +1,6 @@
 import { Response, NextFunction } from 'express';
-import { AuthenticatedRequest, ResponseObject, Blog } from '../../../interfaces';
+import { FilesDB } from '../../../models/files';
+import { AuthenticatedRequest, ResponseObject, Blog, UploadFile } from '../../../interfaces';
 import { BlogDB } from '../../../models/blog';
 
 class AdminBlogController {
@@ -52,6 +53,22 @@ class AdminBlogController {
         } catch (error) {
             return res.status(500).end();
         }
+
+        const files: Array<UploadFile> = req.files;
+        if (!files || !files.length) {
+            return res.send(response);
+        }
+        const mappedFiles = files.map(file => {
+            file['referenceId'] = insertedID;
+            return file;
+        });
+
+        try {
+            await FilesDB.insertFiles(mappedFiles);
+        } catch (error) {
+            console.log(error);
+            return res.status(500).end();
+        }
         return res.send(response);
     }
 
@@ -69,6 +86,21 @@ class AdminBlogController {
                 ResponseMessage: 'Blog Updated'
             }
         } catch (error) {
+            return res.status(500).end();
+        }
+        const files: Array<UploadFile> = req.files;
+        if (!files || !files.length) {
+            return res.send(response);
+        }
+        const mappedFiles = files.map(file => {
+            file['referenceId'] = blogID;
+            return file;
+        });
+
+        try {
+            await FilesDB.insertFiles(mappedFiles);
+        } catch (error) {
+            console.log(error);
             return res.status(500).end();
         }
         return res.send(response);

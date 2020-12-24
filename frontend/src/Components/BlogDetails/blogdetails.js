@@ -1,25 +1,41 @@
-import React from 'react';
+import './blogdetails.css'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-class BlogDetails extends React.Component {
-    state = {
+function BlogDetails() {
+  const [blog, setBlog] = useState({ });
+  let { id } = useParams();
 
-        blog: []
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/v2/blog/${id}`)
+      .then((res) => res.json())
+      .then((response) => {
+        setBlog(response.ResponseData);
+      }).catch((e) => {
+        console.log(e);
+      });
+  }, [id]);
+
+  return(
+   
+    <section id="content">  
+    <div className="container">
+      <div classNam="col-sm-12">
+        <div className="title">
+        <h1 className="text-center">
+          {blog.title}
+        </h1>
+        </div>
+    <div className="content">
+      <p className="text-center">
+        {blog.content}
+        </p>
+      </div>
+        </div>
+      </div>
+    </section>
     
-      }
-      async componentDidMount() {
-        const url = await ('http://localhost:8081/api/5f12d8e5a091472cdc8e9406')
-        const response = await fetch(url);
-        const result = await response.json();
-        this.setState({ blog: result.data.blog })
-        console.log(result);
-      }
-
-      render() {
-        //   console.log(result);
-          return(
-              <h1>Hello Blog BlogDetails</h1>
-          )
-      }
-    }
+  )
+}
 
 export default BlogDetails;
