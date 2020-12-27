@@ -1,3 +1,5 @@
+import { UploadFile } from "./file.model";
+
 interface Blog {
     id: number,
     title: string,
@@ -7,6 +9,8 @@ interface Blog {
     createdOn: Date,
     updatedBy?: string,
     updatedOn?: Date,
+    file?: Array<UploadFile>
+    imagePath?: string
 }
 
 export {

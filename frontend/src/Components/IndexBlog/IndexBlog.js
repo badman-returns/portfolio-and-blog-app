@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import './indexblog.css'
-
-
+import { baseAPIURL, baseBackendURL} from '../../configs';
+import './indexblog.css';
 
 class BlogPost extends React.Component {
     state = {
@@ -11,7 +10,7 @@ class BlogPost extends React.Component {
     }
 
     async componentDidMount() {
-        await fetch('http://localhost:8080/api/v2/blog').then(response => response.json()).then(result => {
+        await fetch(`${baseAPIURL}/blog`).then(response => response.json()).then(result => {
            this.setState({blog: result.ResponseData});
            console.log(this.state.blog);
        })
@@ -28,7 +27,7 @@ class BlogPost extends React.Component {
                             <div className='row' key={blog.id}>
                                 <div className='col-lg-4 col-md-4 col-sm-12'>
                                     <div className="card" style={{ width: '18rem' }}>
-                                        <img className="card-img-top" src={blog.uri} alt="Card cap" />
+                                        <img className="card-img-top" src={baseBackendURL + '/' +blog.imagePath} alt="Card cap" />
                                         <div className="card-bodi">
                                             <h5 className="card-title">{blog.title}</h5>
                                             <p className="card-text">{blog.description}</p>

@@ -25,13 +25,20 @@ This web application is going to be built on top of microservice architechture.
 Requires [MYSQL] service to run and create database.
 Start the MYSQL database service before starting backend.
 
-To run the backend server
+
+
+#### To run the backend server
 ```
 $ cd backend
 $ npm i
 $ npm start
 ```
-To run the frontend Development
+#### To run the frontend server
+##### Backend API and URL Configurations
+* All the configuration files for URL (production and dev) are stored inside frotend/src/configs folder.
+* Use config.js file inside the configs folder to configure baseURL and baseAPIURL
+* By default baseURL is set to http://localhost:8080 until  process.env.NODE_ENV === 'development'
+
 ```
 $ cd frontend
 $ npm i

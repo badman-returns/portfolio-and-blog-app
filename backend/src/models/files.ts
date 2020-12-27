@@ -26,9 +26,23 @@ export class FilesDB {
         });
     }
 
-    public static getFiles(fieldname: string, referenceId: string): Promise<Array<UploadFile>> {
+    public static getAllFiles(): Promise<Array<UploadFile>> {
         return new Promise((resolve, reject) => {
-            db.query(`SELECT * FROM ${Tables.FILES} WHERE fieldname=${fieldname} AND referenceId='${referenceId}`, (err, res) => {
+            db.query(`SELECT * FROM ${Tables.FILES}`, (err, res) => {
+                if (err) {
+                    return reject(err);
+                }
+                if (res.length) {
+                    return resolve(res.map((result: any) => Object.assign({}, result)));
+                }
+                return resolve(null);
+            })
+        })
+    }
+
+    public static getFiles(fieldname: string, referenceId: number): Promise<Array<UploadFile>> {
+        return new Promise((resolve, reject) => {
+            db.query(`SELECT * FROM ${Tables.FILES} WHERE fieldname='${fieldname}' AND referenceId=${referenceId}`, (err, res) => {
                 if (err) {
                     return reject(err);
                 }
