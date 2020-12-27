@@ -12,6 +12,8 @@ class AdminBlogController {
         let response: ResponseObject<Blog | Blog[]>;
         try {
             const allBlogs = await BlogDB.getAllBlogs();
+            const allFiles = await FilesDB.getAllFiles();
+            allBlogs.map(blog => allFiles.map(file => blog.id == file['referenceId'] ? blog.imagePath = file.path : null));
             response = {
                 ResponseData: allBlogs,
                 ResponseMessage: 'Blog List Fetched',
@@ -27,6 +29,8 @@ class AdminBlogController {
         let response: ResponseObject<Blog>;
         try {
             const blog = await BlogDB.getBlogById(blogID);
+            const files = await FilesDB.getFiles(`blog`, Number(blogID));
+            blog.file = files;
             response = {
                 ResponseData: blog,
                 ResponseMessage: 'Blog Details Fetched',

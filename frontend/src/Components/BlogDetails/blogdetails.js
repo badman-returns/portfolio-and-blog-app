@@ -20,7 +20,7 @@ function BlogDetails() {
    
     <section id="content">  
     <div className="container">
-      <div classNam="col-sm-12">
+      <div className="col-sm-12">
         <div className="title">
         <h1 className="text-center">
           {blog.title}

@@ -1,13 +1,16 @@
 import React from "react";
 import "./allblogs.css";
 import { Link } from "react-router-dom";
+import {baseAPIURL, baseBackendURL} from '../../configs';
+
+
 
 class AllBlogs extends React.Component {
   state = {
     blog: [],
   };
   async componentDidMount() {
-    await fetch("http://localhost:8080/api/v2/blog")
+    await fetch(`${baseAPIURL}/blog`)
       .then((response) => response.json())
       .then((result) => {
         this.setState({ blog: result.ResponseData });
@@ -27,7 +30,7 @@ class AllBlogs extends React.Component {
                   <div className="card" style={{ width: "18rem" }}>
                     <img
                       className="card-img-top"
-                      src={blog.uri}
+                      src={`${baseBackendURL}/${blog.imagePath}`}
                       alt="Card cap"
                     />
                     <div className="card-bodie">

@@ -1,6 +1,6 @@
 interface UploadFile {
     id?: number;
-    referenceId: string;
+    referenceId: string | number ;
     fieldname: string;
     originalname: string;
     encoding: string;
