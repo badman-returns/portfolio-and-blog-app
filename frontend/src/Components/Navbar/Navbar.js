@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-   
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './navbar.css'
 function Navbar() {
     return (
@@ -17,21 +14,26 @@ function Navbar() {
                        
 
                         <div className='collapse navbar-collapse' id='navbarNav'>
-                            <ul className='navbar-nav'>
+                            <ul className='navbar-nav m-auto'>
+                                <li className='nav-item'>
+                                    <Link to='/' className='nav-link'>Home</Link>
+                                </li>
                                 <li className='nav-item'>
                                     <Link to='/about' className='nav-link'>About<span /></Link>
                                 </li>
-                            </ul>
-                            <ul className='navbar-nav'>
+                           
+                            
                                 <li className='nav-item'>
                                     <Link to='/blogs' className='nav-link'>Blog<span /></Link>
                                 </li>
-                            </ul>
+                        
                             
-                            <div className="collapse navbar-collapse" />
-                            <ul className='navbar-nav'><li className='nav-item'><Link to='/softwares' className='nav-link'>Softwares<span /></Link></li>
-                            </ul>
-                            <ul className='navbar-nav'>
+                          
+                                <li className='nav-item'>
+                                    <Link to='/softwares' className='nav-link'>Softwares<span /></Link>
+                                    </li>
+                        
+                            
                                 <li className='nav-item'>
                                     <Link to='/contact' className='nav-link'>Contact<span />
                                     </Link>

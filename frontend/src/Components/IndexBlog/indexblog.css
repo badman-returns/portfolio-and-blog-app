@@ -12,6 +12,7 @@
 }
 .btn{
     margin: 5px auto;
+    cursor: pointer !important;
     vertical-align: -webkit-baseline-middle ;
 }
 .card {
