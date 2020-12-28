@@ -31,6 +31,7 @@ class AdminBlogController {
             const blog = await BlogDB.getBlogById(blogID);
             const files = await FilesDB.getFiles(`blog`, Number(blogID));
             blog.file = files;
+            blog.imagePath = blog.file[0].path;
             response = {
                 ResponseData: blog,
                 ResponseMessage: 'Blog Details Fetched',
