@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { baseAPIURL, baseBackendURL } from "../../configs";
+import { baseAPIURL, baseBackendURL } from "../../../configs/urls";
 import "./indexblog.css";
 
 function BlogPost() {
