@@ -1,8 +1,8 @@
 import "./blogdetails.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { baseAPIURL, baseBackendURL } from "../../configs";
-import Spinner from '../Spinner/spinner';
+import { baseAPIURL, baseBackendURL } from "../../../configs/urls";
+import Spinner from '../../Spinner/spinner';
 
 function BlogDetails() {
   const [blog, setBlog] = useState({});

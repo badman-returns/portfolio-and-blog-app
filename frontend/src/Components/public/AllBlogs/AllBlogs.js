@@ -1,8 +1,8 @@
 import React,{useState, useEffect} from "react";
 import "./allblogs.css";
 import { Link } from "react-router-dom";
-import {baseAPIURL, baseBackendURL} from '../../configs';
-import Spinner from "../Spinner/spinner";
+import {baseAPIURL, baseBackendURL} from '../../../configs';
+import Spinner from "../../Spinner/spinner";
 
 function AllBlogs() {
   const[blog, setBlog] = useState([]);
@@ -27,7 +27,7 @@ function AllBlogs() {
         return (
           <div className="row" key={blog.id}>
             <div className="col-lg-4 col-md-4 col-sm-12">
-              <div className="card" style={{ width: "18rem" }}>
+              <div className="card" style={{ width: "18em" }}>
                 <img
                   className="card-img-top"
                   src={`${baseBackendURL}/${blog.imagePath}`}
