@@ -68,6 +68,9 @@ class App {
       console.log(`Creating Files Table ...`);
       await MasterTables.createFilesTable();
 
+      console.log(`Creating Job Post Table ...`);
+      await MasterTables.createJobTable();
+
     } catch (error) {
       throw new Error(error);
     }

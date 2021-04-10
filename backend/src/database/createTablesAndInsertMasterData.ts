@@ -127,6 +127,33 @@ export default class CreateTablesAndInsertMasterData {
             });
         });
     }
+
+    public static async createJobTable() {
+        return new Promise((resolve, reject) => {
+            db.query(`CREATE TABLE IF NOT EXISTS ${Tables.JOBS} (
+                id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id),
+                title VARCHAR(50) NOT NULL,
+                skill text NOT NULL,
+                responsibility text NOT NULL,
+                duration VARCHAR(20),
+                salary VARCHAR(30),
+                perks text,
+                createdBy VARCHAR(255) NOT NULL,
+                updatedBy VARCHAR(255),
+                createdOn DATETIME NOT NULL DEFAULT current_timestamp,
+                updatedOn DATETIME DEFAULT current_timestamp,
+                CONSTRAINT contacts_unique UNIQUE (id))
+                `, (err, res) => {
+                if (err) {
+                    return reject(err);
+                }
+                if (res.length) {
+                    return resolve(true);
+                }
+                return resolve(null);
+            });
+        });
+    }
 }
 
 
